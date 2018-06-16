@@ -56,6 +56,7 @@
      <Compile Include="Assets\T\Script\ItemList.cs" />
      <Compile Include="Assets\T\Script\MakeClone.cs" />
      <Compile Include="Assets\T\Script\Mallet.cs" />
+     <Compile Include="Assets\T\Script\Puck.cs" />
      <Compile Include="Assets\T\Script\Stage.cs" />
      <Compile Include="Assets\T\Script\Tap.cs" />
  <Reference Include="UnityEditor.StandardEvents">

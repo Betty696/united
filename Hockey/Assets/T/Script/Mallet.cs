@@ -5,9 +5,12 @@ using UnityEngine;
 public class Mallet : MonoBehaviour {
     private Vector3 OldPos;
 	// Use this for initialization
-	void Start () {
-		
-	}
+	void Start ()
+    {
+        Vector2 max = Camera.main.ViewportToWorldPoint(Vector2.one);
+        int SclW = 20;
+        this.transform.localScale = new Vector3(max.y / SclW, max.y / SclW);
+    }
 	
 	// Update is called once per frame
 	void Update () {
