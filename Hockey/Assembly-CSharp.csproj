@@ -51,12 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\T\Area.cs" />
-     <Compile Include="Assets\T\Goal.cs" />
-     <Compile Include="Assets\T\MakeClone.cs" />
-     <Compile Include="Assets\T\Mallet.cs" />
-     <Compile Include="Assets\T\Stage.cs" />
-     <Compile Include="Assets\T\Tap.cs" />
+     <Compile Include="Assets\T\Script\Area.cs" />
+     <Compile Include="Assets\T\Script\Goal.cs" />
+     <Compile Include="Assets\T\Script\ItemList.cs" />
+     <Compile Include="Assets\T\Script\MakeClone.cs" />
+     <Compile Include="Assets\T\Script\Mallet.cs" />
+     <Compile Include="Assets\T\Script\Stage.cs" />
+     <Compile Include="Assets\T\Script\Tap.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/takeichi/Desktop/United/united/Hockey/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
