@@ -27,7 +27,12 @@ public class Mallet : MonoBehaviour {
         }
         else
         {
-            rb2D.AddForce(Pow,ForceMode2D.Impulse);
+            Vector3 vel = rb2D.velocity;
+            if(!(vel.x > 0 == Pow.x > 0)){
+                vel.x *= -1;
+                rb2D.velocity = vel;
+            }
+                rb2D.AddForce(Pow, ForceMode2D.Impulse);
         }
     }
 }
