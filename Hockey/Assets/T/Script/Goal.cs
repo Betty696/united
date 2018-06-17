@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-
+    public GameObject Wolf;
     // Use this for initialization
     void Start()
     {
@@ -19,5 +19,6 @@ public class Goal : MonoBehaviour
     void OnTriggerEnter2D(Collider2D c)
     {
         //Destroy(c.gameObject);
+        Instantiate(Wolf);
     }
 }

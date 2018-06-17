@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Mallet : MonoBehaviour {
     private Vector3 OldPos;
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         Vector2 max = Camera.main.ViewportToWorldPoint(Vector2.one);
         int SclW = 20;
@@ -21,6 +21,7 @@ public class Mallet : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D c)
     {
         Rigidbody2D rb2D = c.GetComponent<Rigidbody2D>();
+        int P = c.GetComponent<Puck>().Pow;
         Vector3 Pow = (this.transform.position - OldPos) * 0.01f;
         if (Pow == Vector3.zero)
         {
@@ -36,6 +37,11 @@ public class Mallet : MonoBehaviour {
                 rb2D.velocity = vel;
             }
                 rb2D.AddForce(Pow, ForceMode2D.Impulse);
+        }
+        float speed = rb2D.velocity.magnitude / P;
+        if (speed > 1.0f)
+        {
+            rb2D.velocity = rb2D.velocity.normalized * P;
         }
     }
 }

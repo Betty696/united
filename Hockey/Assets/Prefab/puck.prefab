@@ -185,8 +185,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e122a9306c59c4e896ebe0559b47e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MallletHitA: {fileID: 8300000, guid: 5dd3527f0533f454ea75c0ca7aed3578, type: 3}
-  MallletHitB: {fileID: 8300000, guid: 9e29798cdef713c43ba808c87ecd091f, type: 3}
+  P1ItmeList: {fileID: 0}
+  P2ItmeList: {fileID: 0}
+  ItemUI: {fileID: 1337749743185606, guid: c4b52141dd7d46c48bd1e43e5b23075d, type: 2}
+  MallletHitA: {fileID: 8300000, guid: db913f538a9d7f143b29de9b40bef003, type: 3}
+  MallletHitB: {fileID: 8300000, guid: 44ac3b1aedba64e40bea33faf04cff13, type: 3}
+  Pow: 20
+  Scl: {x: 0, y: 0, z: 0}
+  Image: {fileID: 0}
 --- !u!212 &212983224346067160
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -222,7 +228,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e4adbe1def8798b4db2f301e23de2de9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c56185d1f33bbc7458e983e64a8ab361, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

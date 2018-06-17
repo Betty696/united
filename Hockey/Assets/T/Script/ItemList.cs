@@ -29,4 +29,27 @@ public class ItemList : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SetUI(GameObject obj)
+    {
+        if(List1.transform.childCount == 0)
+        {
+            obj.transform.parent = List1.transform;
+            obj.transform.localPosition = Vector3.zero;
+        }
+        else if (List2.transform.childCount == 0)
+        {
+            obj.transform.parent = List2.transform;
+            obj.transform.localPosition = Vector3.zero;
+        }
+        else if (List3.transform.childCount == 0)
+        {
+            obj.transform.parent = List3.transform;
+            obj.transform.localPosition = Vector3.zero;
+        }
+        else
+        {
+            Destroy(obj);
+        }
+    }
 }

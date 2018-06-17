@@ -28,6 +28,7 @@ public class ItemFrame : MonoBehaviour
                 Collider2D col = Physics2D.OverlapPoint(pos);
                 if (col.transform.tag == "OnItem")
                 {
+                    col.GetComponent<ItemUI>().Use();
                     Destroy(col.gameObject);
                 }
             }

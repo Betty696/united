@@ -14,7 +14,7 @@ public class Tap : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update ()
+	void LateUpdate ()
     {
         if (No1P == -1 && Input.touchCount > 0)
         {
