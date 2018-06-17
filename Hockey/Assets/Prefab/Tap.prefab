@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mallet1P: {fileID: 1859627288332040}
-  Mallet2P: {fileID: 1859627288332040}
+  Mallet2P: {fileID: 1898501623456490}
 --- !u!114 &114325812505378672
 MonoBehaviour:
   m_ObjectHideFlags: 1
