@@ -6,6 +6,9 @@ TagManager:
   tags:
   - OnItem
   - OffItem
+  - 1
+  - 2
+  - puck
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - Player
   - Wall
   - Item
-  - 
+  - Pack
   - 
   - 
   - 

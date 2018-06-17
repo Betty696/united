@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114375839267023606}
   m_Layer: 8
   m_Name: Mallet1P
-  m_TagString: Untagged
+  m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 114325812505378672}
   m_Layer: 8
   m_Name: Mallet2P
-  m_TagString: Untagged
+  m_TagString: 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mallet1P: {fileID: 1859627288332040}
-  Mallet2P: {fileID: 1859627288332040}
+  Mallet2P: {fileID: 1898501623456490}
 --- !u!114 &114325812505378672
 MonoBehaviour:
   m_ObjectHideFlags: 1

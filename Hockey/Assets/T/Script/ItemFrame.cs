@@ -23,15 +23,13 @@ public class ItemFrame : MonoBehaviour
             if (Input.touches[i].phase == TouchPhase.Began)
             {
                 pos = Input.touches[i].position;
-                Ray ray = Camera.main.ScreenPointToRay(pos);
-                RaycastHit hit = new RaycastHit();
-                if (Physics.Raycast(ray, out hit))
+                pos = _Camera.ScreenToWorldPoint(pos);
+
+                Collider2D col = Physics2D.OverlapPoint(pos);
+                if (col.transform.tag == "OnItem")
                 {
-                    //Rayを飛ばしてあたったオブジェクトが自分自身だったら
-                    if (hit.collider.transform.tag == "OnItem")
-                    {
-                        Destroy(hit.collider.transform.gameObject);
-                    }
+                    col.GetComponent<ItemUI>().Use();
+                    Destroy(col.gameObject);
                 }
             }
         }

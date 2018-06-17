@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58362275210495228}
   - component: {fileID: 50234400226152966}
   - component: {fileID: 114421682261266680}
+  - component: {fileID: 82690449901410566}
   m_Layer: 0
   m_Name: puck
   m_TagString: Untagged
@@ -60,7 +61,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &58362275210495228
@@ -78,6 +79,101 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.935
+--- !u!82 &82690449901410566
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740119776571228}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114421682261266680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +185,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e122a9306c59c4e896ebe0559b47e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P1ItmeList: {fileID: 0}
+  P2ItmeList: {fileID: 0}
+  ItemUI: {fileID: 1337749743185606, guid: c4b52141dd7d46c48bd1e43e5b23075d, type: 2}
+  MallletHitA: {fileID: 8300000, guid: db913f538a9d7f143b29de9b40bef003, type: 3}
+  MallletHitB: {fileID: 8300000, guid: 44ac3b1aedba64e40bea33faf04cff13, type: 3}
+  Pow: 20
+  Scl: {x: 0, y: 0, z: 0}
+  Image: {fileID: 0}
 --- !u!212 &212983224346067160
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -124,7 +228,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d609af77bfd80b348a1e1ca550255b5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c56185d1f33bbc7458e983e64a8ab361, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
