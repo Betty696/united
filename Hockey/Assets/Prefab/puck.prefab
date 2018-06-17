@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212983224346067160}
   - component: {fileID: 58362275210495228}
   - component: {fileID: 50234400226152966}
+  - component: {fileID: 114421682261266680}
   m_Layer: 0
   m_Name: puck
   m_TagString: Untagged
@@ -77,6 +78,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.935
+--- !u!114 &114421682261266680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740119776571228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e122a9306c59c4e896ebe0559b47e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212983224346067160
 SpriteRenderer:
   m_ObjectHideFlags: 1
