@@ -8,8 +8,8 @@ public class Puck : MonoBehaviour {
     private ItemList P1List;
     private ItemList P2List;
     public GameObject ItemUI;
-    public AudioClip MallletHitA;
-    public AudioClip MallletHitB;
+    public AudioClip[] MallletHit;
+    private int LastHitSe;
     private AudioSource audioSource;
     private int LastHit = 0;
     public int Pow = 20;
@@ -36,15 +36,17 @@ public class Puck : MonoBehaviour {
     {
         if (coll.gameObject.layer == 8)
         {
-            if (Random.Range(0, 2) == 0)
+            if (audioSource.isPlaying == false)
             {
-                audioSource.clip = MallletHitA;
+                int NO = Random.Range(0, MallletHit.Length);
+                while (LastHitSe == NO)
+                {
+                    NO = Random.Range(0, MallletHit.Length);
+                }
+                LastHitSe = NO;
+                audioSource.clip = MallletHit[NO];
+                audioSource.Play();
             }
-            else
-            {
-                audioSource.clip = MallletHitB;
-            }
-            audioSource.Play();
             if(coll.transform.tag == "1")
             {
                 LastHit = 1;

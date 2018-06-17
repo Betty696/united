@@ -410,6 +410,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114421682261266680, guid: b5de0a3646a54164ea2b512ff0268ac3,
+        type: 2}
+      propertyPath: MallletHit.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4114353371597460, guid: b5de0a3646a54164ea2b512ff0268ac3, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -485,6 +490,26 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: d40697d2831c51b4f98d69a9788a0bea,
         type: 3}
+    - target: {fileID: 114421682261266680, guid: b5de0a3646a54164ea2b512ff0268ac3,
+        type: 2}
+      propertyPath: MallletHit.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dcd219124c18bb644b4b2f4fe78ef607, type: 3}
+    - target: {fileID: 114421682261266680, guid: b5de0a3646a54164ea2b512ff0268ac3,
+        type: 2}
+      propertyPath: MallletHit.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: db913f538a9d7f143b29de9b40bef003, type: 3}
+    - target: {fileID: 114421682261266680, guid: b5de0a3646a54164ea2b512ff0268ac3,
+        type: 2}
+      propertyPath: MallletHit.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 44ac3b1aedba64e40bea33faf04cff13, type: 3}
+    - target: {fileID: 114421682261266680, guid: b5de0a3646a54164ea2b512ff0268ac3,
+        type: 2}
+      propertyPath: MallletHit.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ff229b5a67dec14bbe88b38798bcfa4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5de0a3646a54164ea2b512ff0268ac3, type: 2}
   m_IsPrefabParent: 0
