@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212641652467139458}
   - component: {fileID: 114174279925920336}
   - component: {fileID: 58444604951710062}
+  - component: {fileID: 114527891891179450}
   m_Layer: 10
   m_Name: Item
   m_TagString: Untagged
@@ -73,7 +74,18 @@ MonoBehaviour:
   smoke: {r: 1, g: 0, b: 0.68490505, a: 1}
   ice: {r: 0, g: 0.98080873, b: 1, a: 1}
   metal: {r: 0.11137152, g: 0, b: 1, a: 1}
-  hunder: {r: 0, g: 1, b: 0.11046505, a: 1}
+  thunder: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &114527891891179450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643374740464882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537fba17b6f939b4fb0deb18cc1c7ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212641652467139458
 SpriteRenderer:
   m_ObjectHideFlags: 1

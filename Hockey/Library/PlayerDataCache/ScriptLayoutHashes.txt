@@ -2,6 +2,7 @@ Android
 PlayerPath?
 C:/Users/takeichi/Desktop/United/test.apk
 SceneListBegin?
+Assets/Scenes/TTestScene.unity
 Assets/Scenes/MainScene.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -136,7 +137,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-8961ab6586e7eadc0f2cd7ff915b4f60 Assembly-CSharp.dll:.Puck
+05ce834e5a4eafbae05db94ac36f6a89 Assembly-CSharp.dll:.Puck
 d1031b281d604499a042ec4971876c63 Assembly-CSharp.dll:.Tap
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 f02726adeff0a3ec5905565234b372da UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -159,8 +160,10 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ItemFrame
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Thunder
+69b6b00ac899115847823dab4b8fc2d2 Assembly-CSharp.dll:.Thunder
 842d34941438ca03fa58cd0abe5c0f92 Assembly-CSharp.dll:.Ice
 4c6f3a6b88c76e7357db964800c02ae0 Assembly-CSharp.dll:.GameOver
-30f0dcfb02ab6df371a8945775360d86 Assembly-CSharp.dll:.ItemUI
+42f5ea831c4a8d43131d36e3a5bf27df Assembly-CSharp.dll:.ItemUI
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Stage
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Roll
+2f004d3bb52f713b64eff5f6053b1444 Assembly-CSharp.dll:.NextSenes
