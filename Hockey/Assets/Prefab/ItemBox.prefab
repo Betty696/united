@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212025034026835204}
   - component: {fileID: 58842705197368054}
   - component: {fileID: 114898001117757808}
+  - component: {fileID: 114215100066394698}
   m_Layer: 10
   m_Name: ItemBox
   m_TagString: Untagged
@@ -57,6 +58,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
+--- !u!114 &114215100066394698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1162711245853372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537fba17b6f939b4fb0deb18cc1c7ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114898001117757808
 MonoBehaviour:
   m_ObjectHideFlags: 1

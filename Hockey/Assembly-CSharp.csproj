@@ -64,7 +64,10 @@
      <Compile Include="Assets\T\Script\ItemUI.cs" />
      <Compile Include="Assets\T\Script\Mallet.cs" />
      <Compile Include="Assets\T\Script\Metal.cs" />
+     <Compile Include="Assets\T\Script\NextSenes.cs" />
      <Compile Include="Assets\T\Script\Puck.cs" />
+     <Compile Include="Assets\T\Script\Roll.cs" />
+     <Compile Include="Assets\T\Script\SceneObject.cs" />
      <Compile Include="Assets\T\Script\Small.cs" />
      <Compile Include="Assets\T\Script\Smoke.cs" />
      <Compile Include="Assets\T\Script\Stage.cs" />

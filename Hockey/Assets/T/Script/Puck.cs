@@ -8,13 +8,16 @@ public class Puck : MonoBehaviour {
     private ItemList P1List;
     private ItemList P2List;
     public GameObject ItemUI;
-    public AudioClip MallletHitA;
-    public AudioClip MallletHitB;
+    public Sprite[] MalletHitSprite;
+    public AudioClip[] MallletHit;
+    public GameObject ItemHit;
+    private int LastHitSe;
     private AudioSource audioSource;
     private int LastHit = 0;
     public int Pow = 20;
     public Vector3 Scl;
     public Sprite Image;
+    private SpriteRenderer SP;
     // Use this for initialization
     void Start()
     {
@@ -22,7 +25,8 @@ public class Puck : MonoBehaviour {
         int SclW = 25;
         this.transform.localScale = new Vector3(max.y / SclW, max.y / SclW);
         Scl = this.transform.localScale;
-        Image = GetComponent<SpriteRenderer>().sprite;
+        SP = GetComponent<SpriteRenderer>();
+        Image = SP.sprite;
         audioSource = gameObject.GetComponent<AudioSource>();
         P1List = P1ItmeList.GetComponent<ItemList>();
         P2List = P2ItmeList.GetComponent<ItemList>();
@@ -36,15 +40,22 @@ public class Puck : MonoBehaviour {
     {
         if (coll.gameObject.layer == 8)
         {
-            if (Random.Range(0, 2) == 0)
+            if (audioSource.isPlaying == false)
             {
-                audioSource.clip = MallletHitA;
+                int NO = Random.Range(0, MallletHit.Length);
+                while (LastHitSe == NO)
+                {
+                    NO = Random.Range(0, MallletHit.Length);
+                }
+                LastHitSe = NO;
+                audioSource.clip = MallletHit[NO];
+                audioSource.Play();
+                if(SP.sprite == Image)
+                {
+                    SP.sprite = MalletHitSprite[NO];
+                    Invoke("ReSetSprite", 1.0f);
+                }
             }
-            else
-            {
-                audioSource.clip = MallletHitB;
-            }
-            audioSource.Play();
             if(coll.transform.tag == "1")
             {
                 LastHit = 1;
@@ -56,12 +67,18 @@ public class Puck : MonoBehaviour {
         }
     }
 
+    void ReSetSprite()
+    {
+        SP.sprite = Image;
+    }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
     }
 
     public void SetItemUI(int type)
     {
+        Destroy(Instantiate(ItemHit),5.0f);
         GameObject UI = Instantiate(ItemUI) as GameObject;
         UI.GetComponent<ItemUI>().Type = type;
         UI.GetComponent<ItemUI>().palent = this.gameObject;

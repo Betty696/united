@@ -92,7 +92,14 @@ MonoBehaviour:
   - {fileID: 1545724460399152, guid: eb30cab88a519a844a0c1c04a686e21a, type: 2}
   - {fileID: 1441446621124558, guid: 02608556c07bd7d4c822315224f29bd4, type: 2}
   - {fileID: 1352354038430208, guid: 306bede82e79b934d959c2c7470253a5, type: 2}
-  - {fileID: 1239658449574226, guid: 830cc7609ca6e4f498a176e17009a306, type: 2}
+  - {fileID: 1689754660977270, guid: 830cc7609ca6e4f498a176e17009a306, type: 2}
+  UseSE:
+  - {fileID: 1011254928325850, guid: c8f4d6a00ceb50348813c24aa9f2eb0c, type: 2}
+  - {fileID: 1992250818707894, guid: 13e6b00fd0e39384aa181fd3f6f7162d, type: 2}
+  - {fileID: 1011254928325850, guid: c8f4d6a00ceb50348813c24aa9f2eb0c, type: 2}
+  - {fileID: 1604628077137794, guid: d05e1f0da0314ad4dbf8ea483f02a26f, type: 2}
+  - {fileID: 1618363792912112, guid: 075d0cdfc446ca1469a0ae747e6c0313, type: 2}
+  - {fileID: 1704406135330574, guid: 1b6d2aacafa51da42bfed9f78ee3f67e, type: 2}
   Type: 0
 --- !u!212 &212364849432932172
 SpriteRenderer:
