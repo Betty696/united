@@ -53,6 +53,9 @@
   <ItemGroup>
      <Compile Include="Assets\T\Script\Area.cs" />
      <Compile Include="Assets\T\Script\Goal.cs" />
+     <Compile Include="Assets\T\Script\Item.cs" />
+     <Compile Include="Assets\T\Script\ItemBlock.cs" />
+     <Compile Include="Assets\T\Script\ItemFrame.cs" />
      <Compile Include="Assets\T\Script\ItemList.cs" />
      <Compile Include="Assets\T\Script\MakeClone.cs" />
      <Compile Include="Assets\T\Script\Mallet.cs" />

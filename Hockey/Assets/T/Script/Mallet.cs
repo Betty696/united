@@ -21,7 +21,7 @@ public class Mallet : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D c)
     {
         Rigidbody2D rb2D = c.GetComponent<Rigidbody2D>();
-        Vector3 Pow = (transform.position - OldPos) * 0.001f;
+        Vector3 Pow = (this.transform.position - OldPos) * 0.01f;
         if (Pow == Vector3.zero)
         {
             Vector3 vel = rb2D.velocity;

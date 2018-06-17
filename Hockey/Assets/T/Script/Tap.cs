@@ -11,7 +11,7 @@ public class Tap : MonoBehaviour {
     // Use this for initialization
     void Start () {
         _Camera = Camera.main;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -21,7 +21,13 @@ public class Tap : MonoBehaviour {
             No1P = Input.touches[0].fingerId;
             if (No1P == No2P)
             {
-                No1P = Input.touches[1].fingerId;
+                if(Input.touchCount == 1)
+                {
+                    No1P = -1;
+                }else
+                {
+                    No1P = Input.touches[1].fingerId;
+                }
             }
         }
         if (No2P == -1 && Input.touchCount > 1)

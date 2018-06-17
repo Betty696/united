@@ -18,6 +18,6 @@ public class Goal : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D c)
     {
-        Destroy(c.gameObject);
+        //Destroy(c.gameObject);
     }
 }
