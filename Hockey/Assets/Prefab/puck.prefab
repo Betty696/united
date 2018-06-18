@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 50234400226152966}
   - component: {fileID: 114421682261266680}
   - component: {fileID: 82690449901410566}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: puck
-  m_TagString: Untagged
+  m_TagString: puck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,8 +188,17 @@ MonoBehaviour:
   P1ItmeList: {fileID: 0}
   P2ItmeList: {fileID: 0}
   ItemUI: {fileID: 1337749743185606, guid: c4b52141dd7d46c48bd1e43e5b23075d, type: 2}
-  MallletHitA: {fileID: 8300000, guid: db913f538a9d7f143b29de9b40bef003, type: 3}
-  MallletHitB: {fileID: 8300000, guid: 44ac3b1aedba64e40bea33faf04cff13, type: 3}
+  MalletHitSprite:
+  - {fileID: 21300000, guid: 1bcbb44b3d3627b4291c2e41869ba5e8, type: 3}
+  - {fileID: 21300000, guid: 3ba6a2d6f707343469c0d7ca4faa89b7, type: 3}
+  - {fileID: 21300000, guid: 83e2499ca7232f94f8909cadf071adbc, type: 3}
+  - {fileID: 21300000, guid: 9da15e530371f934097cd4924b1c2692, type: 3}
+  MallletHit:
+  - {fileID: 8300000, guid: dcd219124c18bb644b4b2f4fe78ef607, type: 3}
+  - {fileID: 8300000, guid: db913f538a9d7f143b29de9b40bef003, type: 3}
+  - {fileID: 8300000, guid: 44ac3b1aedba64e40bea33faf04cff13, type: 3}
+  - {fileID: 8300000, guid: 5ff229b5a67dec14bbe88b38798bcfa4, type: 3}
+  ItemHit: {fileID: 1508798135043346, guid: 93971c55d70f05a4793e7941adc80c12, type: 2}
   Pow: 20
   Scl: {x: 0, y: 0, z: 0}
   Image: {fileID: 0}
@@ -228,7 +237,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c56185d1f33bbc7458e983e64a8ab361, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d40697d2831c51b4f98d69a9788a0bea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

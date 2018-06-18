@@ -73,6 +73,7 @@
      <Compile Include="Assets\T\Script\Stage.cs" />
      <Compile Include="Assets\T\Script\Tap.cs" />
      <Compile Include="Assets\T\Script\Thunder.cs" />
+     <Compile Include="Assets\T\Script\WinFlag.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/takeichi/Desktop/United/united/Hockey/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
