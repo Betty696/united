@@ -8,6 +8,7 @@ public class Tap : MonoBehaviour {
     public GameObject Mallet2P;
     private int No1P = -1;
     private int No2P = -1;
+    public bool On = true;
     // Use this for initialization
     void Start () {
         _Camera = Camera.main;
@@ -16,30 +17,38 @@ public class Tap : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate ()
     {
-        if (No1P == -1 && Input.touchCount > 0)
+        if (!On)
         {
-            No1P = Input.touches[0].fingerId;
-            if (No1P == No2P)
-            {
-                if(Input.touchCount == 1)
-                {
-                    No1P = -1;
-                }else
-                {
-                    No1P = Input.touches[1].fingerId;
-                }
-            }
-        }
-        if (No2P == -1 && Input.touchCount > 1)
-        {
-            No2P = Input.touches[1].fingerId;
-            if(No1P == No2P)
-            {
-                No2P = Input.touches[0].fingerId;
-            }
+            return;
         }
 
         Vector3 pos;
+
+        if (No1P == -1 && Input.touchCount > 0)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                pos = Input.touches[i].position;
+                if (Input.touches[i].phase == TouchPhase.Began && _Camera.ScreenToWorldPoint(pos + _Camera.transform.forward * 10).x > 0)
+                {
+                    No1P = Input.touches[i].fingerId;
+                    break;
+                }
+            }
+        }
+        if (No2P == -1 && Input.touchCount > 0)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                pos = Input.touches[i].position;
+                if (Input.touches[i].phase == TouchPhase.Began && _Camera.ScreenToWorldPoint(pos + _Camera.transform.forward * 10).x < 0)
+                {
+                    No2P = Input.touches[i].fingerId;
+                    break;
+                }
+            }
+        }
+
         for (int i = 0; i < Input.touchCount; i++)
         {
             if (No1P == Input.touches[i].fingerId)

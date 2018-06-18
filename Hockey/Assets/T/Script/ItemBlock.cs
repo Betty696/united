@@ -6,6 +6,7 @@ public class ItemBlock : MonoBehaviour {
     public GameObject Petal;
     public GameObject Item;
     private int Num;
+    private Rigidbody2D rb2d;
     // Use this for initialization
     void Start ()
     {
@@ -19,6 +20,7 @@ public class ItemBlock : MonoBehaviour {
         Vector2 max = Camera.main.ViewportToWorldPoint(Vector2.one);
         int SclW = 40;
         this.transform.localScale = new Vector3(max.y / SclW, max.y / SclW);
+        rb2d = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
@@ -30,6 +32,14 @@ public class ItemBlock : MonoBehaviour {
     {
         int Cnt = (int)coll.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude/4;
         int No;
+
+        if (Random.Range(0, 2) == 0)
+        {
+            rb2d.AddTorque((Cnt + 1) * 5);
+        }
+        else{
+            rb2d.AddTorque(-(Cnt + 1) * 5);
+        }
         for (int i = 0; i < Cnt; i++)
         {
             No = Random.Range(0, this.transform.childCount);

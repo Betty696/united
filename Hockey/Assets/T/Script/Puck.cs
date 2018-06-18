@@ -17,6 +17,7 @@ public class Puck : MonoBehaviour {
     public int Pow = 20;
     public Vector3 Scl;
     public Sprite Image;
+    public GameObject Tap;
     private SpriteRenderer SP;
     // Use this for initialization
     void Start()
@@ -34,6 +35,11 @@ public class Puck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+    }
+
+    void OnDestroy()
+    {
+        Tap.GetComponent<Tap>().On = false;
     }
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -84,10 +90,12 @@ public class Puck : MonoBehaviour {
         UI.GetComponent<ItemUI>().palent = this.gameObject;
         if(LastHit == 1)
         {
+            UI.transform.localRotation = Quaternion.Euler(0,0,90);
             P1List.SetUI(UI);
         }
         else
         {
+            UI.transform.localRotation = Quaternion.Euler(0, 0, -90);
             P2List.SetUI(UI);
         }
     }

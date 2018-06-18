@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour {
     public Sprite[] Anim;
+    public GameObject Next;
     int num = 0;
     private SpriteRenderer sr;
     Vector3 StartPos;
@@ -54,7 +55,7 @@ public class GameOver : MonoBehaviour {
             Invoke("SpriteChange", 0.1f);
         }
         else{
-            Destroy(this.gameObject,0.2f);
+            Instantiate(Next);
         }
     }
 }
