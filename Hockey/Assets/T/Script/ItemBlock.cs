@@ -14,7 +14,7 @@ public class ItemBlock : MonoBehaviour {
         float angle = 0;
         for(int i = 0;i < Num; i++)
         {
-            Instantiate(Petal, transform.position, Quaternion.Euler(0,0,angle)).transform.parent = this.transform;
+            Instantiate(Petal, transform.position, Quaternion.Euler(0,0,angle),this.transform).transform.localScale = Vector3.one;
             angle += 360 / Num;
         }
         Vector2 max = Camera.main.ViewportToWorldPoint(Vector2.one);

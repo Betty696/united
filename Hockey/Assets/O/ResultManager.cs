@@ -5,70 +5,44 @@ using UnityEngine.SceneManagement;
 
 public class ResultManager : MonoBehaviour {
 
-	private string nextScene;
-
-	// シーンが始まってからのカウンタ
-	private int m_nTime;
-
-// ボタン入力を受け付けない秒数
-	public int m_nFreezTime = 120;
-
-	// Use this for initialization
+    public GameObject Fade;
+    public GameObject Logo;
+    public GameObject OOKAMI;
+    public Sprite PL2;
+    public Sprite PL2O;
+    private float tim = 0;
+    private bool flag = false;
+    public GameObject next;
+    // Use this for initialization
     void Start()
     {
-        m_nTime = 0;
-
-		// フェードへの参照を取得
-        Fade fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Fade>();
-
-		//フェードイン
-		fade.FadeIn();
+        if (WinFlag.Instance.Win1P)
+        {
+            Logo.GetComponent<SpriteRenderer>().sprite = PL2;
+            OOKAMI.GetComponent<SpriteRenderer>().sprite = PL2O;
+        }
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		//時間のカウントアップ
-		m_nTime++;
+        tim += Time.deltaTime;
+        if(tim > 2.0f)
+        {
+            flag = true;
+        }
+        if (flag)
+        {
+            if(Input.touchCount > 0)
+            {
+                Fade.GetComponent<FadeIn>().Set();
+                Invoke("NExt", 1.0f);
+            }
+        }
+    }
 
-		if(m_nTime > m_nFreezTime)
-		{
-			if (Input.GetMouseButton(0))
-			{
-				ChangeScene("TitleScene");
-			}
-
-			if (Input.touchCount > 0)
-			{
-				foreach (Touch t in Input.touches)
-				{
-					if (t.phase == TouchPhase.Began)
-					{
-						Debug.Log("fid=" + t.fingerId + "x=" + t.position + "y=" + t.position.y);
-					}
-
-					ChangeScene("TitleScene");
-				}
-			}
-		}
-
-		//フェードへの参照を取得
-		Fade fade = GameObject.Find("Fade").GetComponent<Fade>();
-		
-		//フェードが終わったら遷移
-		if (fade.isFinishedFadeOut())
-		{
-			SceneManager.LoadScene(nextScene);
-		}
-	}
-
-	//ゲームへ遷移開始
-	public void ChangeScene(string sceneName)
-	{
-		nextScene = sceneName;
-
-		//フェードアウト開始
-		Fade fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Fade>();
-		fade.FadeOut();
+    void NExt()
+    {
+        Instantiate(next);
     }
 }

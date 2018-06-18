@@ -12,7 +12,7 @@ public class Area : MonoBehaviour {
     void Start () {
         min = Camera.main.ViewportToWorldPoint(Vector2.zero);
         max = Camera.main.ViewportToWorldPoint(Vector2.one);
-        Vector2 min2 = min * 0.1f;
+        Vector2 min2 = min * 0.05f;
         Vector2 max2 = max * 0.05f;
         Top.transform.position = new Vector3(0,max.y - max2.y, 0);
         Under.transform.position = new Vector3(0,min.y - min2.y,0);

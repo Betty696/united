@@ -5,7 +5,6 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public bool Flag1P = false;
-    public GameObject Flag;
     public GameObject Wolf;
     // Use this for initialization
     void Start()
@@ -20,7 +19,7 @@ public class Goal : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D c)
     {
-        Flag.GetComponent<WinFlag>().Win1P = Flag1P;
+        WinFlag.Instance.Win1P = Flag1P;
         Destroy(c.gameObject);
         Instantiate(Wolf);
     }

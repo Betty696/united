@@ -8,6 +8,9 @@ public class Roll : MonoBehaviour {
     float ti;
 	// Use this for initialization
 	void Start () {
+        Color col = GetComponent<SpriteRenderer>().color;
+        col.a = 0.5f;
+        GetComponent<SpriteRenderer>().color = col;
         EndScl = this.transform.localScale;
         rot.z = Random.Range(3, 30);
         Destroy(this, 1);

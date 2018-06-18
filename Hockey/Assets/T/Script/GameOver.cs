@@ -37,7 +37,7 @@ public class GameOver : MonoBehaviour {
         float height = sr.sprite.bounds.size.y;
 
         //  両者の比率を出してスプライトのローカル座標系に反映
-        transform.localScale = new Vector3(worldScreenHeight / height / 2, worldScreenHeight / height / 2);
+        transform.localScale = new Vector3(worldScreenHeight / height / 1.5f, worldScreenHeight / height / 1.5f);
     }
 	
 	// Update is called once per frame

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Mallet : MonoBehaviour {
     private Vector3 OldPos;
+    private Rigidbody2D rb2d;
     // Use this for initialization
     void Start ()
     {
         Vector2 max = Camera.main.ViewportToWorldPoint(Vector2.one);
         int SclW = 20;
         this.transform.localScale = new Vector3(max.y / SclW, max.y / SclW);
+        rb2d = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
@@ -18,31 +20,8 @@ public class Mallet : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter2D(Collider2D c)
+    void FixedUpdate()
     {
-        Rigidbody2D rb2D = c.GetComponent<Rigidbody2D>();
-        int P = c.GetComponent<Puck>().Pow;
-        Vector3 Pow = (this.transform.position - OldPos) * 0.01f;
-        if (Pow == Vector3.zero)
-        {
-            Vector3 vel = rb2D.velocity;
-            vel.x *= -1;
-            rb2D.velocity = vel;
-        }
-        else
-        {
-            Vector3 vel = rb2D.velocity;
-            if (!(vel.x > 0 == Pow.x > 0))
-            {
-                vel.x *= -1;
-                rb2D.velocity = vel;
-            }
-                rb2D.AddForce(Pow, ForceMode2D.Impulse);
-        }
-        float speed = rb2D.velocity.magnitude / P;
-        if (speed > 1.0f)
-        {
-            rb2D.velocity = rb2D.velocity.normalized * P;
-        }
+        rb2d.velocity = (this.transform.position - OldPos) * 10;
     }
 }

@@ -19,6 +19,7 @@ public class Puck : MonoBehaviour {
     public Sprite Image;
     public GameObject Tap;
     private SpriteRenderer SP;
+    private Rigidbody2D rb2D;
     // Use this for initialization
     void Start()
     {
@@ -31,10 +32,20 @@ public class Puck : MonoBehaviour {
         audioSource = gameObject.GetComponent<AudioSource>();
         P1List = P1ItmeList.GetComponent<ItemList>();
         P2List = P2ItmeList.GetComponent<ItemList>();
+        rb2D = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+    }
+
+    void FixedUpdate()
+    {
+        float speed = rb2D.velocity.magnitude / Pow;
+        if (speed > 1.0f)
+        {
+            rb2D.velocity = rb2D.velocity.normalized * Pow;
+        }
     }
 
     void OnDestroy()
@@ -80,6 +91,14 @@ public class Puck : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        if (coll.transform.tag == "1")
+        {
+            LastHit = 1;
+        }
+        if (coll.transform.tag == "2")
+        {
+            LastHit = 2;
+        }
     }
 
     public void SetItemUI(int type)

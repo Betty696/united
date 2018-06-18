@@ -52,4 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_nextScene:
-    m_SceneName: TTestScene
+    m_SceneName: ResultScene

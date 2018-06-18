@@ -63,6 +63,9 @@
      <Compile Include="Assets\O\TreeCurtainContr.cs" />
      <Compile Include="Assets\T\Script\Area.cs" />
      <Compile Include="Assets\T\Script\Big.cs" />
+     <Compile Include="Assets\T\Script\FadeIn.cs" />
+     <Compile Include="Assets\T\Script\FadeOut.cs" />
+     <Compile Include="Assets\T\Script\fadePop.cs" />
      <Compile Include="Assets\T\Script\GameOver.cs" />
      <Compile Include="Assets\T\Script\Goal.cs" />
      <Compile Include="Assets\T\Script\Ice.cs" />
@@ -76,18 +79,22 @@
      <Compile Include="Assets\T\Script\Metal.cs" />
      <Compile Include="Assets\T\Script\NextSenes.cs" />
      <Compile Include="Assets\T\Script\Puck.cs" />
+     <Compile Include="Assets\T\Script\ResultWolf.cs" />
      <Compile Include="Assets\T\Script\Roll.cs" />
      <Compile Include="Assets\T\Script\Small.cs" />
      <Compile Include="Assets\T\Script\Smoke.cs" />
      <Compile Include="Assets\T\Script\Stage.cs" />
+     <Compile Include="Assets\T\Script\StageUV.cs" />
      <Compile Include="Assets\T\Script\Tap.cs" />
      <Compile Include="Assets\T\Script\Thunder.cs" />
+     <Compile Include="Assets\T\Script\UVdown.cs" />
+     <Compile Include="Assets\T\Script\UVUp.cs" />
      <Compile Include="Assets\T\Script\WinFlag.cs" />
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/takeichi/Desktop/unitedd/Hockey/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/takeichi/Desktop/unitedd/Hockey/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/takeichi/Desktop/United/Hockey/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>C:/Users/takeichi/Desktop/United/Hockey/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

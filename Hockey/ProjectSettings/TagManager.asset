@@ -9,6 +9,8 @@ TagManager:
   - 1
   - 2
   - puck
+  - Fade
+  - WinFlag
   layers:
   - Default
   - TransparentFX
